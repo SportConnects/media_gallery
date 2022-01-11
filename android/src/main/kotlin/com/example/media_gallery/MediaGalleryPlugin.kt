@@ -258,7 +258,7 @@ class MediaGalleryPlugin: FlutterPlugin, MethodCallHandler {
 
           // Getting range of images
           val limit = take ?: (total - offset)
-          val orderBy = MediaStore.Images.Media.DATE_TAKEN + " DESC"
+          val orderBy = MediaStore.Images.Media.DATE_TAKEN + " ASC"
 
           val projection = arrayOf(MediaStore.Images.Media._ID,
                   MediaStore.Images.Media.BUCKET_ID,
@@ -342,7 +342,7 @@ class MediaGalleryPlugin: FlutterPlugin, MethodCallHandler {
 
           // Getting range of video
           val limit = take ?: (total - offset)
-          val orderBy = MediaStore.Video.Media.DATE_TAKEN + " DESC"
+          val orderBy = MediaStore.Video.Media.DATE_TAKEN + " ASC"
 
           val projection = arrayOf(MediaStore.Video.Media._ID,
                   MediaStore.Video.Media.BUCKET_ID,
